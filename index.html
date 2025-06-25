@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Evette Mark | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<main class="fade-in">
+
+  <section class="hero">
+  <h1>Hi, I'm Evette Mark 👋</h1>
+  <img class="avatar rounded-2 avatar-user" src="https://avatars.githubusercontent.com/u/66867044?s=400&amp;u=7eb2b1b43d70f9dada98ee1c228e5ac71ac8fe8a&amp;v=4" width="200" height="200" alt="@markevette">
+  </section>
+
+  <header>
+   <p>Aspiring NLP & AI Specialist | Technical Support Engineer</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+    <a href="#resume">Resume</a>
+  </nav>
+  <div class="toggle-container">
+  <label class="switch">
+    <input type="checkbox" id="darkToggle">
+    <span class="slider round"></span>
+  </label>
+  <span>Dark Mode</span>
+  </div>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Analytical and detail-oriented Technical Support Engineer transitioning into Natural Language Processing. Proven record of resolving complex technical challenges with efficiency, empathy, and a data-driven mindset. Worked with Python programming, NLP pipeline, Machine Learning deployment, data preprocessing, cloud environments, and system troubleshooting, with a passion for building intelligent, human-centric AI tools.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul name="Technical Skills">
+      <li>Languages & Frameworks: Python (NLP-focused), SQL, OOP</li>
+      <li>AI & ML: Machine Learning, Deep Learning, NLP, Data Science, Algorithms</li>
+      <li>Tools: Jupyter, GitHub, Docker, Microsoft 365, ServiceNow</li>
+      <li>Operating Systems: Linux (Ubuntu), Windows</li>
+      <li>System Troubleshooting</li>
+    </ul>
+    <ul name="Soft Skills">
+      <li>Prioritization & multitasking under pressure</li>
+      <li>Team collaboration & leadership in shift activities</li>
+      <li>Strong communication (English – Fluent, German – Beginner, Hindi – Native speaker)</li>
+      <li>Initiative-driven & structured approach</li>
+    </ul>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+      <p><strong>Master of Science in Computer Science - International University of Applied Sciences, Berlin</strong><br></p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <img src="traffic-forecast.png" alt="Traffic Flow Prediction Graph" />
+      <div>
+        <h3>Traffic Flow Prediction</h3>
+        <p>Forecasted congestion using time-series ML with Python, Pandas, and Matplotlib. Enhanced routing accuracy and real-time coordination in urban planning scenarios.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Work Experience</h2>
+    <p><strong>Technical Support Executive – MPHASIS</strong><br>Resolved 150+ monthly issues, achieving high SLA and first-contact resolution.</p>
+    <p><strong>Customer Service Executive – TRAVEL MASTERS</strong><br>Handled booking and vendor payments with precision and client satisfaction.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>If you have any questions or just want to chat about NLP, feel free to reach out!<br>I am also open to internships, research, and collaborations in AI and NLP!</p>
+    <form action="https://formspree.io/f/YOUR_ID" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required><br>
+      <input type="email" name="_replyto" placeholder="Your Email" required><br>
+      <textarea name="message" placeholder="Your Message" required></textarea><br>
+      <button type="submit">Send</button>
+    </form>
+    <br>
+    <br>
+  <div class="social-links">
+  <a href="https://www.linkedin.com/in/evette-mark-b19058162" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="50" height="50" />
+  </a>
+  <a href="https://github.com/markevette" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="50" height="50" />
+  </a>
+  </div>
+  </section>
+
+  <section id="resume">
+    <h2>Resume</h2>
+    <p>Click <a href="EVETTE MARK.pdf" download>here</a> for a detailed overview of my professional journey.</p>
+  </section>
+
+<footer style="text-align: center;">
+  <p>© 2025 Evette Mark. All rights reserved.</p>
+</footer>
+
+<script>
+  const toggle = document.getElementById('darkToggle');
+  toggle.addEventListener('change', () => {
+    document.body.classList.toggle('dark');
+  });
+
+  const faders = document.querySelectorAll('.fade-in');
+
+  const appearOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -20px 0px"
+  };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(fade => {
+    appearOnScroll.observe(fade);
+  });
+</script>
+
+</main>
+</body>
+</html>
